@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechGear Hub</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind config for dark mode and font -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+<body class="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white font-poppins min-h-screen flex flex-col">
+
+  <!-- Fixed Top Navigation Bar -->
+
+<nav class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-90 dark:bg-gray-800 dark:bg-opacity-90 backdrop-blur-md z-50">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Left: Site Title -->
+    <a href="index.html"
+       class="text-2xl font-semibold tracking-wide select-none flex-shrink-0"
+       aria-label="TechGear Hub Home">
+      TechGear Hub
+    </a>
+
+    <!-- Right: Navigation Buttons -->
+    <div class="flex items-center space-x-4">
+
+      <a href="product.html"
+         class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Products
+      </a>
+
+      <a href="about.html"
+         class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        About
+      </a>
+
+      <a href="Contact.html"
+         class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Contact
+      </a>
+
+      <button id="cart-btn"
+              class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+
+      <button id="wishlist-btn"
+              class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Wishlist (<span id="wishlist-count">0</span>)
+      </button>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle"
+              class="p-2 rounded-md hover:bg-indigo-600 hover:text-white transition-colors duration-300 focus:outline-none">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6 block dark:hidden"
+             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+        </svg>
+
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6 hidden dark:block"
+             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07 5.07l-.7-.7M6.34 6.34l-.7-.7m12.02 12.02l-.7-.7M6.34 17.66l-.7-.7M12 7a5 5 0 100 10 5 5 0 000-10z" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+   <!-- Hero Section -->
+  <section
+    class="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+   style="background-image: url('./Images/Background.png');"> 
+
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative max-w-4xl text-center px-6">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+        Welcome to TechGear Hub
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-md">
+        Build your dream PC with premium components
+      </p>
+    </div>
+  </section>
+
+  </main>
+  <!-- Link to JS -->
+  <script src="./JS/script.js"></script>
+</body>
+

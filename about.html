@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --techblue: #2563eb; /* Tailwind blue-600 */
+      --techgreen: #16a34a; /* Tailwind green-600 */
+    }
+    /* Custom animations */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    .fadeInUp { animation: fadeInUp 0.8s ease forwards;}
+    /* To prevent content hidden behind fixed navbar */
+    body { padding-top: 4rem;} /* height of navbar h-16 = 4rem */
+    /* Hide scrollbar for horizontal nav overflow */
+    .no-scrollbar::-webkit-scrollbar { display: none;}
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none;}
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-poppins">
+
+  <!-- Navigation Bar -->
+
+<nav class="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-90 dark:bg-gray-800 dark:bg-opacity-90 backdrop-blur-md z-50">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Left: Site Title -->
+    <a href="index.html"
+       class="text-2xl font-semibold tracking-wide select-none flex-shrink-0"
+       aria-label="TechGear Hub Home">
+      TechGear Hub
+    </a>
+
+    <!-- Right: Navigation Buttons -->
+    <div class="flex items-center space-x-4">
+
+      <a href="product.html"
+         class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Products
+      </a>
+
+      <a href="about.html"
+         class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        About
+      </a>
+
+      <a href="Contact.html"
+         class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Contact
+      </a>
+
+      <button id="cart-btn"
+              class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+
+      <button id="wishlist-btn"
+              class="nav-link whitespace-nowrap px-3 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+        Wishlist (<span id="wishlist-count">0</span>)
+      </button>
+
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle"
+              class="p-2 rounded-md hover:bg-indigo-600 hover:text-white transition-colors duration-300 focus:outline-none">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6 block dark:hidden"
+             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+        </svg>
+
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6 hidden dark:block"
+             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07 5.07l-.7-.7M6.34 6.34l-.7-.7m12.02 12.02l-.7-.7M6.34 17.66l-.7-.7M12 7a5 5 0 100 10 5 5 0 000-10z" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</nav>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./Images/Background.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative max-w-4xl text-center px-6">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">About Us</h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-md">At TechGear Hub, we believe technology should make life easier, smarter, and more connected. That's why we bring you the best laptops, accessories, and gadgets all in one place. From powerful laptops and 4K monitors to gaming gear and portable chargers, we provide high-quality products designed for work, study, and play.</p>
+    </div>
+  </section>
+
+  <!-- Our Core Features Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-semibold text-center mb-12 text-gray-900">Our Core Features</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center fadeInUp hover:-translate-y-3 hover:shadow-2xl transition duration-300" style="animation-delay: 0.1s">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[var(--techblue)] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m-6 3h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v7a2 2 0 002 2z"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">Innovative Design</h3>
+          <p class="text-gray-600">Creating visually stunning and user-friendly interfaces that captivate your audience.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center fadeInUp hover:-translate-y-3 hover:shadow-2xl transition duration-300" style="animation-delay: 0.2s">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[var(--techgreen)] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">Timely Delivery</h3>
+          <p class="text-gray-600">We respect your deadlines and ensure projects are completed on time without compromising quality.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center fadeInUp hover:-translate-y-3 hover:shadow-2xl transition duration-300" style="animation-delay: 0.3s">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[var(--techblue)] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21V3m0 0L3 7m6-4l6 4"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">Expert Team</h3>
+          <p class="text-gray-600">Our skilled professionals bring years of experience and passion to every project.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center fadeInUp hover:-translate-y-3 hover:shadow-2xl transition duration-300" style="animation-delay: 0.4s">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[var(--techgreen)] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">Customer Support</h3>
+          <p class="text-gray-600">We provide 24/7 support to ensure your satisfaction and smooth operation.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center fadeInUp hover:-translate-y-3 hover:shadow-2xl transition duration-300" style="animation-delay: 0.5s">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[var(--techblue)] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">Scalable Solutions</h3>
+          <p class="text-gray-600">Our products grow with your business, ensuring long-term success and flexibility.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-white rounded-xl shadow-lg p-8 text-center fadeInUp hover:-translate-y-3 hover:shadow-2xl transition duration-300" style="animation-delay: 0.6s">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-[var(--techgreen)] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">Quality Assurance</h3>
+          <p class="text-gray-600">We rigorously test all our products to meet the highest standards of quality and reliability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-gray-300 pt-10 pb-6 mt-16 shadow-inner border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <!-- Footer Info -->
+      <div class="mb-6 md:mb-0">
+        <h4 class="text-xl font-semibold text-white mb-2">TechGear Hub</h4>
+        <p class="text-sm text-gray-400">
+          Discover laptops, gadgets, and tips for tech productivity.<br>
+          Related Topics: Web Development, Networking, Product Reviews
+        </p>
+      </div>
+      <!-- Footer Links -->
+      <nav class="flex space-x-8">
+        <a href="index.html" class="hover:text-blue-400 transition duration-300">Home</a>
+        <a href="product.html" class="hover:text-blue-400 transition duration-300">Products</a>
+        <a href="about.html" class="hover:text-blue-400 transition duration-300">About</a>
+        <a href="Contact.html" class="hover:text-blue-400 transition duration-300">Contact</a>
+      </nav>
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-6 md:mt-0">
+        <a href="#" class="hover:text-blue-400 transition duration-300" aria-label="Facebook">
+          <!-- Facebook SVG -->
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.38 9.91V15.47h-2V12h2v-2.3c0-2 1.18-3.11 3-3.11.87 0 1.78.16 1.78.16v2h-1c-.99 0-1.27.61-1.27 1.23V12h2.5l-.4 3.47H14.1v6.44A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition duration-300" aria-label="Twitter">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.5.36a8.88 8.88 0 01-2.87 1.1A4.48 4.48 0 0012 8.08a12.94 12.94 0 01-9.4-4.76S-1.19 11.29 8 16c-3.42 2.27-8 1.62-8 1.62A13.07 13.07 0 0016.29 19c6.69 0 10.35-5.54 11.15-10.32a8.78 8.78 0 002.17-2.22z"/></svg>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition duration-300" aria-label="LinkedIn">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0a5 5 0 01.5 9.9V22h-4v-7h-2v7h-4V10.6A5 5 0 0122 0z"/></svg>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition duration-300" aria-label="YouTube">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.4-.8-2C20.4 5 19.4 5 18 4.98 16.66 5 12 5 12 5s-4.66 0-6 .02C4.59 5 3.6 5 2.98 6 2.38 6.6 2.2 8 2.2 8S2 9.5 2 11v2c0 1.5.2 3 .2 3s.2 1.4.78 2c.62 1 1.62 1 3.02 1.02C7.34 19 12 19 12 19s4.66 0 6-.02c1.41 0 2.4 0 3.02-1 .58-.6.78-2 .78-2S22 14.5 22 13v-2c0-1.5-.2-3-.2-3zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 mt-8">
+      &copy; 2025 TechGear Hub. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle logic
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    const iconMoon = document.getElementById('icon-moon');
+    const iconSun = document.getElementById('icon-sun');
+
+    // Initialize dark mode based on localStorage or system preference
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      iconMoon.classList.add('hidden');
+      iconSun.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      iconMoon.classList.remove('hidden');
+      iconSun.classList.add('hidden');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        iconMoon.classList.add('hidden');
+        iconSun.classList.remove('hidden');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        iconMoon.classList.remove('hidden');
+        iconSun.classList.add('hidden');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+
+</body>
+</html>

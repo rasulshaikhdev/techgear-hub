@@ -1,0 +1,75 @@
+
+/* General buttons */
+.btn-animated {
+  transition: transform 0.2s, background-color 0.2s;
+}
+.btn-animated:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Input fields */
+.input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  color: black;
+}
+.dark .input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: white;
+}
+
+/* Error text */
+.error {
+  font-size: 0.875rem;
+  color: #dc2626;
+}
+
+/* Modal transitions */
+#product-modal,
+#cart-modal,
+#wishlist-modal,
+#checkout-modal {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#product-modal.flex,
+#cart-modal.flex,
+#wishlist-modal.flex,
+#checkout-modal.flex {
+  opacity: 1;
+  transform: translateY(0);
+}
+#product-modal.hidden,
+#cart-modal.hidden,
+#wishlist-modal.hidden,
+#checkout-modal.hidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Toast notification */
+#toast {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Scroll-to-top */
+#scroll-to-top {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+#scroll-to-top:hover {
+  transform: scale(1.1);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+
+
+
+
+
+
