@@ -4,12 +4,11 @@
 TechGear Hub is a simple, responsive, computer-based e-commerce frontend project built using **HTML, CSS, JavaScript, and Tailwind CSS**.  
 It focuses on clean UI, smooth user experience, and real-world frontend structure.
 
----
+
 
 ## 🚀 Live Demo
 👉 https://rasulshaikhdev.github.io/techgear-hub/
 
----
 
 ## 📌 Features
 - Multi-page website (Home, Products, About, Contact)
@@ -21,7 +20,7 @@ It focuses on clean UI, smooth user experience, and real-world frontend structur
 - GitHub Pages deployment ready
 - Responsive design for desktop & mobile
 
----
+
 
 ## 🛠️ Technologies Used
 - **HTML5**
@@ -30,28 +29,7 @@ It focuses on clean UI, smooth user experience, and real-world frontend structur
 - **Tailwind CSS**
 - **GitHub Pages**
 
----
 
-## 📂 Project Structure
-techgear-hub/
-│
-├── index.html
-├── product.html
-├── about.html
-├── Contact.html
-│
-├── CSS/
-│ └── style.css
-│
-├── JS/
-│ └── script.js
-│
-└── Images/
-└── (project images)
-
-
-
----
 
 ## ▶️ How to Run Locally
 1. Download or clone the repository
@@ -70,7 +48,7 @@ Steps:
 3. Select `main` branch and `/root`
 4. Save and wait for deployment
 
----
+
 
 ## 🧠 What I Learned
 - Proper frontend folder structure
@@ -80,18 +58,18 @@ Steps:
 - Debugging real-world frontend issues
 - Deploying projects on GitHub Pages
 
----
+
 
 ## 👨‍💻 Author
 **Rasul Shaikh**  
 GitHub: https://github.com/rasulshaikhdev
 
----
+
 
 ## ⭐ Acknowledgement
 This project was built as part of my frontend learning journey to strengthen my JavaScript, UI, and GitHub skills.
 
----
+
 
 ## 📜 License
 This project is for learning and practice purposes.
